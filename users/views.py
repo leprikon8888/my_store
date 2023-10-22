@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponsePermanentRedirect
+from django.shortcuts import render, HttpResponseRedirect
 from django.contrib import auth, messages
 from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 from django.urls import reverse
@@ -46,16 +46,29 @@ def profile(request):
         form = UserProfileForm(instance=request.user)
 
 
+    # variant1
+    # total_sum = sum(basket.summa() for basket in baskets)
+    # total_quantity = sum(basket.quantity for basket in baskets)
+
+    #variant2
+    # total_sum = 0
+    # total_quantity = 0
+    # for basket in baskets:
+    #     total_sum += basket.summa()
+    #     total_quantity += basket.quantity
+
+    #variant3 в моделс пай
+
     context = {
         'title': 'Store - Профиль',
         'form': form,
-        'baskets': Basket.objects.filter(user=request.user),
+        'baskets': Basket.objects.filter(user=request.user)
     }
     return render(request, 'users/profile.html', context)
 
 
 def logout(request):
     auth.logout(request)
-    return HttpResponsePermanentRedirect(reverse('index'))
+    return HttpResponseRedirect(reverse('index'))
 
 
