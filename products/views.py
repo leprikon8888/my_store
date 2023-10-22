@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponsePermanentRedirect
+from django.shortcuts import render, HttpResponseRedirect
 from products.models import Product, ProductCategory, Basket
 from users.models import User
 #функції = контролери = вьюхі
@@ -30,10 +30,10 @@ def basket_add(request, product_id):
         basket = baskets.first()
         basket.quantity += 1
         basket.save()
-    return HttpResponsePermanentRedirect(request.META['HTTP_REFERER'])
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 
 def basket_remove(request, basket_id):
     basket = Basket.objects.get(id=basket_id)
     basket.delete()
-    return HttpResponsePermanentRedirect(request.META['HTTP_REFERER'])
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
