@@ -10,6 +10,10 @@ class ProductCategory(models.Model):
     is_visible = models.BooleanField(default=True)
     position = models.PositiveSmallIntegerField(unique=True)
 
+
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
     def __str__(self):
         return self.name
 
@@ -25,6 +29,9 @@ class Product(models.Model):
     is_visible = models.BooleanField(default=True)
     position = models.PositiveSmallIntegerField()
 
+    class Meta:
+        verbose_name = 'Product'
+        verbose_name_plural = 'Products'
     def __str__(self):
         return f'Продукт: {self.name} | Категория: {self.category.name}'
 
