@@ -3,6 +3,7 @@ from django.contrib import auth, messages
 from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 from django.urls import reverse
 from products.models import Basket
+from django.contrib.auth.decorators import login_required
 
 
 def login(request):
@@ -14,7 +15,7 @@ def login(request):
             user = auth.authenticate(username=username, password=password)
             if user:
                 auth.login(request, user)
-                return HttpResponsePermanentRedirect(reverse('index'))
+                return HttpResponseRedirect(reverse('index'))
     else:
         form = UserLoginForm()
     context = {'form': form}
@@ -27,11 +28,12 @@ def registration(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Поздравляем, регистрация успешна!')
-            return HttpResponsePermanentRedirect(reverse('users:login'))
+            return HttpResponseRedirect(reverse('users:login'))
     else:
         form = UserRegistrationForm()
     context = {'form': form}
     return render(request, 'users/registration.html', context)
+
 
 
 def profile(request):
@@ -39,25 +41,11 @@ def profile(request):
         form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponsePermanentRedirect(reverse('users:profile'))
+            return HttpResponseRedirect(reverse('users:profile'))
         else:
             print(form.errors)
     else:
         form = UserProfileForm(instance=request.user)
-
-
-    # variant1
-    # total_sum = sum(basket.summa() for basket in baskets)
-    # total_quantity = sum(basket.quantity for basket in baskets)
-
-    #variant2
-    # total_sum = 0
-    # total_quantity = 0
-    # for basket in baskets:
-    #     total_sum += basket.summa()
-    #     total_quantity += basket.quantity
-
-    #variant3 в моделс пай
 
     context = {
         'title': 'Store - Профиль',
