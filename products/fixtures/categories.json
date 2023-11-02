@@ -1,0 +1,57 @@
+[
+{
+  "model": "products.productcategory",
+  "pk": 1,
+  "fields": {
+    "name": "новинки",
+    "slug": "novinki",
+    "description": "новинки...",
+    "is_visible": true,
+    "position": 1
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 2,
+  "fields": {
+    "name": "одежда",
+    "slug": "odezhda",
+    "description": "одежда....",
+    "is_visible": true,
+    "position": 2
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 3,
+  "fields": {
+    "name": "обувь",
+    "slug": "obuv",
+    "description": "обувь....",
+    "is_visible": true,
+    "position": 3
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 4,
+  "fields": {
+    "name": "аксессуары",
+    "slug": "aksessuary",
+    "description": "аксессуары...",
+    "is_visible": true,
+    "position": 4
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 5,
+  "fields": {
+    "name": "подарки",
+    "slug": "podarki",
+    "description": "подарки...",
+    "is_visible": true,
+    "position": 5
+  }
+}
+]

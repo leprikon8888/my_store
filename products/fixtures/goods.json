@@ -1,0 +1,92 @@
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Худи черного цвета с монограммами adidas Originals",
+    "slug": "hudi-chernogo-cveta-s-monogrammami-adidas-originals",
+    "description": "Мягкая ткань для свитшотов. Стиль и комфорт – это образ жизни.",
+    "price": "6000.00",
+    "quantity": 5,
+    "image": "products_images/Adidas-hoodie_pU06HVJ.png",
+    "category": 2,
+    "is_visible": true,
+    "position": 1
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Синяя куртка The North Face",
+    "slug": "sinyaya-kurtka-the-north-face",
+    "description": "Гладкая ткань. Водонепроницаемое покрытие. Легкий и теплый пуховый наполнитель.",
+    "price": "24000.00",
+    "quantity": 3,
+    "image": "products_images/Blue-jacket-The-North-Face_oRzKcsI.png",
+    "category": 1,
+    "is_visible": true,
+    "position": 2
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Коричневый спортивный oversized-топ ASOS DESIGN",
+    "slug": "korichnevyj-sportivnyj-oversized-top-asos-design",
+    "description": "Материал с плюшевой текстурой. Удобный и мягкий.",
+    "price": "3400.00",
+    "quantity": 2,
+    "image": "products_images/Brown-sports-oversized-top-ASOS-DESIGN_ioPEIca.png",
+    "category": 2,
+    "is_visible": true,
+    "position": 3
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Черный рюкзак Nike Heritage",
+    "slug": "chernyj-ryukzak-nike-heritage",
+    "description": "Плотная ткань. Легкий материал.",
+    "price": "2300.00",
+    "quantity": 5,
+    "image": "products_images/Black-Nike-Heritage-backpack_JX9WdpT.png",
+    "category": 4,
+    "is_visible": true,
+    "position": 4
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex",
+    "slug": "chernye-tufli-na-platforme-s-3-parami-lyuversov-dr-martens-1461-bex",
+    "description": "Гладкий кожаный верх. Натуральный материал.",
+    "price": "14000.00",
+    "quantity": 6,
+    "image": "products_images/Black-Dr-Martens-shoes_3BrfR0Z.png",
+    "category": 3,
+    "is_visible": true,
+    "position": 5
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "name": "Темно-синие широкие строгие брюки ASOS DESIGN",
+    "slug": "temno-sinie-shirokie-strogie-bryuki-asos-design",
+    "description": "Легкая эластичная ткань сирсакер Фактурная ткань.",
+    "price": "2900.00",
+    "quantity": 8,
+    "image": "products_images/Dark-blue-wide-leg-ASOs-DESIGN-trousers_E2C9wuV.png",
+    "category": 2,
+    "is_visible": true,
+    "position": 6
+  }
+}
+]
