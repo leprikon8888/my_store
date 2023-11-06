@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     
     'products',
     'users',
+    'orders',
 ]
 
 # Установите кодировку на UTF-8
