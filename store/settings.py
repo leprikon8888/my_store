@@ -14,7 +14,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-DOMAIN_NAME = 'http://localhost:8000'
+DOMAIN_NAME = 'http://127.0.0.1:8000'
 
 # Application definition
 
@@ -195,3 +195,8 @@ SOCIALACCOUNT_PROVIDERS = {
 
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+
+#stripe
+
+STRIPE_PUBLIC_KEY = 'pk_test_51O9jq2EdOeIQUVa3fcoMpBhg1yrT8wMXMHk5azA8e1t4hY4KxwEYzi0bT4jLj8iQTFMkxduTHHttJyVLyQgFP55b00kCdS7P21'
+STRIPE_SECRET_KEY = 'sk_test_51O9jq2EdOeIQUVa3Zs9fvPzWiiXPhbNR3BtZy8DnMpmnTNPi1quckPrGHSOdlK6wXnR3pFSKNwXRJXF2PKKqGyey00iYMnxrO6'
