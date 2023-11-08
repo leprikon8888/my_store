@@ -12,7 +12,7 @@ class ProductCategoryAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
     list_display = ('name', 'price', 'quantity', 'category')
-    fields = ('name', 'slug', 'description', ('price', 'quantity'), 'image', 'category')
+    fields = ('name', 'slug', 'description', ('price', 'quantity'), 'image', 'stripe_product_price_id', 'category')
     search_fields = ('name',)
     ordering = ('price', 'name')
 
