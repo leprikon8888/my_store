@@ -73,6 +73,7 @@ class BasketQuerySet(models.QuerySet):
             line_items.append(item)
         return line_items
 
+
 class Basket(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
     product = models.ForeignKey(to=Product, on_delete=models.CASCADE)
@@ -86,3 +87,12 @@ class Basket(models.Model):
 
     def summa(self):
         return self.product.price * self.quantity
+
+    def de_json(self):
+        basket_item = {
+            'product_name': self.product.name,
+            'quantity': self.quantity,
+            'price': float(self.product.price),
+            'summa': float(self.summa()),
+        }
+        return basket_item
