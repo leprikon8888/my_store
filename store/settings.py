@@ -1,7 +1,5 @@
 import environ
 from pathlib import Path
-from environ import Env
-
 
 
 env = environ.Env(
@@ -66,6 +64,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
 
     "debug_toolbar",
+    'django_extensions',
     
     'products',
     'users',
